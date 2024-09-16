@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { BrowseComponent } from './browse/browse.component';
-import { browseGuard } from './services/browse.guard';
+import { browseGuard } from './shared/services/browse.guard';
+import { LoginComponent } from './pages/login/login.component';
+import { BrowseComponent } from './pages/browse/browse.component';
 
 const routes: Routes = [
   {

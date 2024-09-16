@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-browse',
@@ -11,10 +11,4 @@ export class BrowseComponent {
   email = JSON.parse(sessionStorage.getItem('loggedInUser')!).email;
   userProfileImage = JSON.parse(sessionStorage.getItem('loggedInUser')!)
     .picture;
-  constructor(private auth: AuthService) {}
-
-  signOut() {
-    sessionStorage.removeItem('loggedInUser');
-    this.auth.signOut();
-  }
 }

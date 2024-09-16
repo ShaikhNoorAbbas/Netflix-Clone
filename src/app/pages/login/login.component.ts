@@ -16,12 +16,12 @@ export class LoginComponent implements OnInit {
         '816794127491-qlidaoaruqt74e9647gtcpkf0dr78fc2.apps.googleusercontent.com', // Replace with your Google client ID
       callback: (response: any) => this.handleLogin(response),
     });
-
     google.accounts.id.renderButton(document.getElementById('google-btn'), {
       theme: 'filled_blue',
       size: 'large',
       shape: 'pill',
       width: 'auto',
+      logo_alignment: 'left',
     });
   }
 
