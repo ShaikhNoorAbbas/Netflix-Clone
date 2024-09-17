@@ -7,10 +7,22 @@ import { LoginComponent } from './pages/login/login.component';
 import { BrowseComponent } from './pages/browse/browse.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { BannerComponent } from './core/components/banner/banner.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MovieCarouselComponent } from './shared/components/movie-carousel/movie-carousel.component';
+import { DescriptionPipe } from './shared/pipes/description.pipe';
+import { ImagePipe } from './shared/pipes/image.pipe';
 @NgModule({
-  declarations: [AppComponent, LoginComponent, BrowseComponent, HeaderComponent, BannerComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    BrowseComponent,
+    HeaderComponent,
+    BannerComponent,
+    MovieCarouselComponent,
+    DescriptionPipe,
+    ImagePipe,
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
